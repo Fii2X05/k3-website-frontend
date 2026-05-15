@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+## 📝 Log Progres Sederhana (PT Beira Deep)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Berikut adalah catatan langkah demi langkah pengembangan website profil dan keselamatan kerja PT Beira Deep. Log ini dibuat sesederhana mungkin agar seluruh rekan kerja dan tim dapat memantau progres dengan mudah.
 
-Currently, two official plugins are available:
+### Tahap 1: Pembentukan Struktur Dasar (Selesai)
+- Mengubah proyek lama menjadi struktur profil perusahaan "PT Beira Deep".
+- Mengatur navigasi menjadi 3 halaman utama: **Beranda**, **K3 & Lingkungan**, dan **Denah Fasilitas**.
+- Menerapkan warna dasar kebesaran perusahaan: Navy (Biru Gelap) dan Gold (Emas).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Tahap 2: Pengisian Konten & Denah (Selesai)
+- **Beranda:** Menambahkan deskripsi perusahaan dan statistik pencapaian keselamatan.
+- **K3 & Lingkungan:** Memasukkan Landasan Hukum K3, Hierarki Mitigasi Risiko, dan Prosedur Tanggap Darurat (ERP).
+- **Denah Fasilitas:** Mengintegrasikan 8 gambar peta rig asli dengan menu navigasi yang bisa diklik.
+- **Tabel Bahaya:** Menyusun database 20 titik lokasi bahaya beserta alat pelindung (APD) yang wajib dipakai.
 
-## React Compiler
+### Tahap 3: Perbaikan Tampilan & Estetika (Selesai)
+- Merapikan posisi teks agar tidak menabrak gambar denah.
+- Mengganti latar belakang Beranda menjadi sistem *Slideshow* (gambar berganti otomatis) yang sangat estetik.
+- Mempertebal kontras warna teks dan tombol utama agar sangat mudah dibaca tanpa terpengaruh ekstensi *browser* (*Dark Mode*).
+- Menambahkan animasi estetika tambahan (efek transisi, zoom halus pada gambar, dan elemen melayang) agar website terasa hidup dan modern.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Versi Lama (Arsip)
+> Versi sebelumnya dari website ini (v1.0.0) merupakan sistem portal K3 umum. Seluruh desain tersebut kini telah berevolusi penuh menjadi platform PT Beira Deep.
