@@ -35,6 +35,7 @@ export default function Layout() {
               <Link to="/" className={`nav-link text-white hover:text-gold-500 transition ${location.pathname === '/' ? 'text-gold-500 active' : ''}`}>Beranda</Link>
               <Link to="/k3" className={`nav-link text-white hover:text-gold-500 transition ${location.pathname === '/k3' ? 'text-gold-500 active' : ''}`}>K3 & Lingkungan</Link>
               <Link to="/facility" className={`nav-link text-white hover:text-gold-500 transition ${location.pathname === '/facility' ? 'text-gold-500 active' : ''}`}>Denah Fasilitas</Link>
+              <Link to="/structure" className={`nav-link text-white hover:text-gold-500 transition ${location.pathname === '/structure' ? 'text-gold-500 active' : ''}`}>Struktur Organisasi</Link>
             </div>
 
             <button className="md:hidden text-2xl text-sand-100 hover:text-gold-500 transition" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -49,6 +50,7 @@ export default function Layout() {
             <Link to="/" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Beranda</Link>
             <Link to="/k3" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">K3 & Lingkungan</Link>
             <Link to="/facility" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Denah Fasilitas</Link>
+            <Link to="/structure" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Struktur Organisasi</Link>
           </div>
         </div>
       </nav>

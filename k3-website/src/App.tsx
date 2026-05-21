@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import K3 from './pages/K3';
 import Facility from './pages/Facility';
+import Structure from './pages/Structure';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="k3" element={<K3 />} />
           <Route path="facility" element={<Facility />} />
+          <Route path="structure" element={<Structure />} />
         </Route>
       </Routes>
     </Router>
