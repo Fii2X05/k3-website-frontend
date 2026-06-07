@@ -39,6 +39,12 @@ export default function Layout() {
               <Link to="/incidents" className={`nav-link text-white hover:text-gold-500 transition ${location.pathname === '/incidents' ? 'text-gold-500 active' : ''}`}>Laporan Insiden</Link>
             </div>
 
+            <div className="hidden md:block">
+              <Link to="/auth" className="px-6 py-2 bg-gold-500 text-navy-950 font-bold rounded-lg hover:bg-gold-400 transition shadow-lg hover:shadow-gold-500/20 inline-block">
+                <i className="fas fa-sign-in-alt mr-2"></i>Login
+              </Link>
+            </div>
+
             <button className="md:hidden text-2xl text-sand-100 hover:text-gold-500 transition" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
             </button>
@@ -53,6 +59,9 @@ export default function Layout() {
             <Link to="/facility" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Denah Fasilitas</Link>
             <Link to="/structure" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Struktur Organisasi</Link>
             <Link to="/incidents" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Laporan Insiden</Link>
+            <Link to="/auth" className="block w-full text-center px-4 py-3 text-navy-950 bg-gold-500 hover:bg-gold-400 rounded-lg transition font-bold mt-2">
+              <i className="fas fa-sign-in-alt mr-2"></i>Login
+            </Link>
           </div>
         </div>
       </nav>

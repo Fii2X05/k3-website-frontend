@@ -5,6 +5,7 @@ import K3 from './pages/K3';
 import Facility from './pages/Facility';
 import Structure from './pages/Structure';
 import IncidentReport from './pages/IncidentReport';
+import Auth from './pages/Auth';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="facility" element={<Facility />} />
           <Route path="structure" element={<Structure />} />
           <Route path="incidents" element={<IncidentReport />} />
+          <Route path="auth" element={<Auth />} />
         </Route>
       </Routes>
     </Router>
