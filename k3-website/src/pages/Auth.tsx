@@ -19,6 +19,10 @@ export default function Auth() {
   const [regId, setRegId] = useState('');
   const [regPwd, setRegPwd] = useState('');
 
+  // Show/hide password toggles
+  const [showLoginPwd, setShowLoginPwd] = useState(false);
+  const [showRegPwd, setShowRegPwd] = useState(false);
+
   // Already logged in → redirect
   useEffect(() => {
     if (user) navigate('/incidents');
@@ -110,9 +114,16 @@ export default function Auth() {
             </div>
             <div>
               <label className="block text-xs font-bold text-gold-400 uppercase tracking-wider mb-1.5">Kata Sandi Akses</label>
-              <input required type="password" value={loginPwd} onChange={e => { setLoginPwd(e.target.value); setError(''); }}
-                className="w-full px-4 py-3 bg-navy-800/50 border border-navy-600 rounded-xl text-sand-50 placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition"
-                placeholder="••••••••" />
+              <div className="relative">
+                <input required type={showLoginPwd ? 'text' : 'password'} value={loginPwd} onChange={e => { setLoginPwd(e.target.value); setError(''); }}
+                  className="w-full px-4 py-3 pr-12 bg-navy-800/50 border border-navy-600 rounded-xl text-sand-50 placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition"
+                  placeholder="••••••••" />
+                <button type="button" onClick={() => setShowLoginPwd(!showLoginPwd)}
+                  className="absolute inset-y-0 right-0 px-4 flex items-center text-gold-400 hover:text-gold-500 transition"
+                  tabIndex={-1} aria-label={showLoginPwd ? 'Sembunyikan sandi' : 'Tampilkan sandi'}>
+                  <i className={`fas ${showLoginPwd ? 'fa-eye' : 'fa-eye-slash'} text-sm`}></i>
+                </button>
+              </div>
             </div>
             <div className="flex justify-end">
               <button type="button" onClick={() => alert('Hubungi IT Support Rig di Ext. 991')}
@@ -165,9 +176,16 @@ export default function Auth() {
             </div>
             <div>
               <label className="block text-xs font-bold text-gold-400 uppercase tracking-wider mb-1.5">Buat Kata Sandi <span className="text-red-400">*</span></label>
-              <input required type="password" value={regPwd} onChange={e => setRegPwd(e.target.value)}
-                className="w-full px-4 py-3 bg-navy-800/50 border border-navy-600 rounded-xl text-sand-50 placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
-                placeholder="Min. 8 karakter" />
+              <div className="relative">
+                <input required type={showRegPwd ? 'text' : 'password'} value={regPwd} onChange={e => setRegPwd(e.target.value)}
+                  className="w-full px-4 py-3 pr-12 bg-navy-800/50 border border-navy-600 rounded-xl text-sand-50 placeholder-navy-500 focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                  placeholder="Min. 8 karakter" />
+                <button type="button" onClick={() => setShowRegPwd(!showRegPwd)}
+                  className="absolute inset-y-0 right-0 px-4 flex items-center text-gold-400 hover:text-gold-500 transition"
+                  tabIndex={-1} aria-label={showRegPwd ? 'Sembunyikan sandi' : 'Tampilkan sandi'}>
+                  <i className={`fas ${showRegPwd ? 'fa-eye' : 'fa-eye-slash'} text-sm`}></i>
+                </button>
+              </div>
             </div>
             <button type="submit" disabled={isLoading}
               className="w-full flex justify-center items-center py-3 px-4 rounded-xl font-bold text-sm text-navy-950 bg-gold-500 hover:bg-gold-400 transition-all disabled:opacity-60 hover:-translate-y-0.5">
