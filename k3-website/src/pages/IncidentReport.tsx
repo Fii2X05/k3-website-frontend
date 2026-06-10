@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 
 interface Incident {
   id: string;
@@ -56,6 +57,9 @@ const statusIcon = (s: string) => {
 };
 
 export default function IncidentReport() {
+  const { user } = useAuth();
+  const isManagement = user?.role === 'management';
+
   const [incidents, setIncidents] = useState<Incident[]>([]);
   const [view, setView] = useState<'dashboard' | 'form' | 'detail'>('dashboard');
   const [selectedIncident, setSelectedIncident] = useState<Incident | null>(null);
@@ -63,8 +67,15 @@ export default function IncidentReport() {
   const [filterStatus, setFilterStatus] = useState<string>('Semua');
   const [toast, setToast] = useState<string | null>(null);
 
-  // Form state
-  const [formData, setFormData] = useState({ reporter: '', location: LOCATIONS[0], category: CATEGORIES[0], severity: 'Sedang' as Incident['severity'], description: '', action: '' });
+  // Form state — pre-fill reporter from logged-in user
+  const [formData, setFormData] = useState({
+    reporter: user?.name || '',
+    location: LOCATIONS[0],
+    category: CATEGORIES[0],
+    severity: 'Sedang' as Incident['severity'],
+    description: '',
+    action: ''
+  });
 
   useEffect(() => {
     const stored = localStorage.getItem('beira_incidents');
@@ -144,6 +155,15 @@ export default function IncidentReport() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-black text-sand-50 mb-4">Sistem Pelaporan Insiden</h1>
           <p className="text-sand-500 max-w-2xl mx-auto text-lg">Catat, lacak, dan kelola insiden keselamatan secara real-time untuk menjamin keselamatan kru di atas anjungan.</p>
+          {user && (
+            <div className="mt-4 inline-flex items-center gap-2 bg-navy-800/60 border border-gold-500/20 px-4 py-2 rounded-full">
+              <div className="w-6 h-6 rounded-full bg-gold-500 flex items-center justify-center text-navy-950 text-xs font-black">{user.avatar}</div>
+              <span className="text-sand-200 text-sm font-semibold">{user.name}</span>
+              <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${isManagement ? 'bg-gold-500/20 text-gold-300' : 'bg-blue-500/20 text-blue-300'}`}>
+                {isManagement ? 'Akses Penuh' : 'Akses Terbatas'}
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -217,7 +237,7 @@ export default function IncidentReport() {
                           <span className={`px-2 py-1 rounded-md text-xs font-bold border ${severityColor(inc.severity)}`}>{inc.severity}</span>
                         </td>
                         <td className="px-4 py-3 text-center relative">
-                          {editStatusId === inc.id ? (
+                          {isManagement && editStatusId === inc.id ? (
                             <div className="flex flex-col gap-1 absolute z-20 bg-white border border-sand-200 rounded-xl shadow-xl p-2 -left-4 top-0 min-w-[140px]">
                               {STATUSES.map(s => (
                                 <button key={s} onClick={() => updateStatus(inc.id, s)} className={`text-left px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-sand-50 ${inc.status === s ? 'bg-navy-100 font-bold' : ''}`}>
@@ -227,9 +247,14 @@ export default function IncidentReport() {
                               <button onClick={() => setEditStatusId(null)} className="text-xs text-red-500 mt-1 font-bold">Batal</button>
                             </div>
                           ) : (
-                            <button onClick={() => setEditStatusId(inc.id)} className="flex items-center gap-1.5 mx-auto cursor-pointer group" title="Klik untuk ubah status">
-                              <span className={`w-2.5 h-2.5 rounded-full ${statusColor(inc.status)} group-hover:animate-pulse`}></span>
+                            <button
+                              onClick={() => isManagement ? setEditStatusId(inc.id) : showToast('⚠️ Hanya Manajemen yang dapat mengubah status insiden.')}
+                              className="flex items-center gap-1.5 mx-auto group"
+                              title={isManagement ? 'Klik untuk ubah status' : 'Akses terbatas'}
+                            >
+                              <span className={`w-2.5 h-2.5 rounded-full ${statusColor(inc.status)} ${isManagement ? 'group-hover:animate-pulse' : ''}`}></span>
                               <span className="text-xs font-semibold text-navy-800 group-hover:text-navy-600">{inc.status}</span>
+                              {!isManagement && <i className="fas fa-lock text-sand-500 text-[10px]"></i>}
                             </button>
                           )}
                         </td>
@@ -238,9 +263,15 @@ export default function IncidentReport() {
                             <button onClick={() => { setSelectedIncident(inc); setView('detail'); }} className="w-7 h-7 bg-navy-100 text-navy-700 rounded-lg hover:bg-navy-900 hover:text-sand-50 transition flex items-center justify-center" title="Detail">
                               <i className="fas fa-eye text-xs"></i>
                             </button>
-                            <button onClick={() => deleteIncident(inc.id)} className="w-7 h-7 bg-red-50 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition flex items-center justify-center" title="Hapus">
-                              <i className="fas fa-trash text-xs"></i>
-                            </button>
+                            {isManagement ? (
+                              <button onClick={() => deleteIncident(inc.id)} className="w-7 h-7 bg-red-50 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition flex items-center justify-center" title="Hapus">
+                                <i className="fas fa-trash text-xs"></i>
+                              </button>
+                            ) : (
+                              <button title="Akses terbatas" className="w-7 h-7 bg-sand-100 text-sand-500 rounded-lg flex items-center justify-center cursor-not-allowed" onClick={() => showToast('⚠️ Hanya Manajemen yang dapat menghapus laporan.')}>
+                                <i className="fas fa-lock text-xs"></i>
+                              </button>
+                            )}
                           </div>
                         </td>
                       </tr>
@@ -296,7 +327,15 @@ export default function IncidentReport() {
               <div className="space-y-5">
                 <div>
                   <label className="block text-sm font-bold text-navy-900 mb-1.5">Nama Pelapor <span className="text-red-500">*</span></label>
-                  <input type="text" value={formData.reporter} onChange={e => setFormData({ ...formData, reporter: e.target.value })} placeholder="Masukkan nama lengkap pelapor" className="w-full px-4 py-3 rounded-xl border border-sand-200 bg-sand-50 text-navy-900 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition" />
+                  <input
+                    type="text"
+                    value={formData.reporter}
+                    onChange={e => setFormData({ ...formData, reporter: e.target.value })}
+                    readOnly={!!user}
+                    placeholder="Masukkan nama lengkap pelapor"
+                    className={`w-full px-4 py-3 rounded-xl border border-sand-200 bg-sand-50 text-navy-900 focus:outline-none focus:ring-2 focus:ring-gold-500 transition ${user ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  />
+                  {user && <p className="text-xs text-navy-800/50 mt-1"><i className="fas fa-info-circle mr-1"></i>Nama pelapor otomatis diisi dari akun Anda.</p>}
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-5">

@@ -44,7 +44,7 @@ export default function Structure() {
                     <div key={name} className="bg-navy-900 p-6 rounded-2xl border-t-4 border-gold-500 shadow-lg text-center hover:-translate-y-1 transition-transform">
                         <i className="fas fa-user-tie text-gold-500 text-3xl mb-3"></i>
                         <h4 className="font-bold text-sand-50 text-sm">{name}</h4>
-                        <p className="text-xs text-sand-300 mt-1">Board of Directors</p>
+                        <p className="text-xs text-gold-400 mt-1">Board of Directors</p>
                     </div>
                 ))}
             </div>
