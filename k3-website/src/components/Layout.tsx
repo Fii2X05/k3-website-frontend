@@ -46,8 +46,8 @@ export default function Layout() {
                   <Link to="/structure" className={`nav-link text-white hover:text-gold-500 transition text-sm ${location.pathname === '/structure' ? 'text-gold-500 active' : ''}`}>Struktur Organisasi</Link>
                   <Link to="/incidents" className={`nav-link text-white hover:text-gold-500 transition text-sm ${location.pathname === '/incidents' ? 'text-gold-500 active' : ''}`}>Laporan Insiden</Link>
                   {user?.role === 'management' && (
-                    <Link to="/management" className={`nav-link text-gold-500 hover:text-gold-400 font-bold transition text-sm ${location.pathname === '/management' ? 'text-gold-400 active' : ''}`}>
-                      <i className="fas fa-crown mr-1.5"></i>Command Center
+                    <Link to="/management" className={`nav-link text-white hover:text-gold-500 transition text-sm ${location.pathname === '/management' ? 'text-gold-500 active' : ''}`}>
+                      Command Center
                     </Link>
                   )}
                 </>
@@ -114,8 +114,8 @@ export default function Layout() {
                 <Link to="/structure" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Struktur Organisasi</Link>
                 <Link to="/incidents" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">Laporan Insiden</Link>
                 {user?.role === 'management' && (
-                  <Link to="/management" className="block w-full text-left px-4 py-3 text-gold-500 hover:bg-navy-800 hover:text-gold-400 rounded-lg transition font-bold">
-                    <i className="fas fa-crown mr-2"></i>Command Center
+                  <Link to="/management" className="block w-full text-left px-4 py-3 text-sand-100 hover:bg-navy-800 hover:text-gold-500 rounded-lg transition font-medium">
+                    Command Center
                   </Link>
                 )}
                 <button onClick={() => { setShowLogoutConfirm(true); setIsMobileMenuOpen(false); }} className="w-full text-left px-4 py-3 text-red-400 hover:bg-red-900/20 rounded-lg transition font-semibold text-sm">

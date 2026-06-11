@@ -80,7 +80,7 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">OIM (Offshore Installation Manager)</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Pemimpin tertinggi di anjungan. Semua departemen melapor kepadanya. Ia bertanggung jawab mutlak atas keselamatan, produksi, dan operasional harian rig.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Pemimpin tertinggi di anjungan. Semua departemen melapor kepadanya. Ia bertanggung jawab mutlak atas keselamatan, produksi, dan operasional harian rig.</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-gold-100 text-gold-900 rounded-lg text-xs font-bold border border-gold-300">David Rennick</span>
                         </div>
@@ -110,14 +110,14 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Safety Officer / HSE Advisor</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Melapor langsung kepada OIM. Bertugas mengawasi protokol keselamatan, memberikan izin kerja (Permit to Work), dan menginvestigasi seluruh insiden operasional.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Melapor langsung kepada OIM. Bertugas mengawasi protokol keselamatan, memberikan izin kerja (Permit to Work), dan menginvestigasi seluruh insiden operasional.</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-green-50 text-green-900 rounded-lg text-xs font-semibold border border-green-200">Nicole Hall</span>
                         </div>
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Rig Medic</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Dokter atau petugas medis bersertifikat tinggi yang bersiaga 24 jam untuk menangani kesehatan kru dan keadaan darurat medis (Medical Emergency).</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Dokter atau petugas medis bersertifikat tinggi yang bersiaga 24 jam untuk menangani kesehatan kru dan keadaan darurat medis (Medical Emergency).</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200 border-dashed">TBD (Tenaga Medis)</span>
                         </div>
@@ -139,14 +139,14 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Toolpusher</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Kepala operasi pengeboran, merupakan perwakilan utama dari perusahaan kontraktor rig untuk mengebor sumur ke dasar laut.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Kepala operasi pengeboran, merupakan perwakilan utama dari perusahaan kontraktor rig untuk mengebor sumur ke dasar laut.</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-orange-50 text-orange-900 rounded-lg text-xs font-semibold border border-orange-200">George Gregor</span>
                         </div>
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Driller & Assistant Driller</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Operator ahli yang mengendalikan mesin bor utama dari kabin (Drill Cabin), serta asisten yang memantau parameter pengeboran secara real-time.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Operator ahli yang mengendalikan mesin bor utama dari kabin (Drill Cabin), serta asisten yang memantau parameter pengeboran secara real-time.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Grant', 'Kenneth Patterson'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -155,7 +155,7 @@ export default function Structure() {
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Derrickman & Roughneck (Floorhand)</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Bekerja di menara bor untuk menyusun pipa dan memantau lumpur (mud system). Kru fisik terdepan di lantai bor (rig floor) yang menyambung pipa besi raksasa.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Bekerja di menara bor untuk menyusun pipa dan memantau lumpur (mud system). Kru fisik terdepan di lantai bor (rig floor) yang menyambung pipa besi raksasa.</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">Stuart "Gibbo" Gibson</span>
                         </div>
@@ -177,14 +177,14 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Maintenance Supervisor / Chief Engineer</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Kepala teknisi pemeliharaan, menjamin seluruh mesin (dari generator hingga pompa) di rig tidak pernah mati.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Kepala teknisi pemeliharaan, menjamin seluruh mesin (dari generator hingga pompa) di rig tidak pernah mati.</p>
                         <div className="flex flex-wrap gap-2">
                             <span className="px-3 py-1 bg-blue-50 text-blue-900 rounded-lg text-xs font-semibold border border-blue-200">Douglas Dunbar</span>
                         </div>
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Mechanic & Electrician</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Memperbaiki mesin diesel tugas berat, pompa hidrolik, dan memelihara sistem kelistrikan tegangan tinggi maupun rendah di seluruh anjungan.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Memperbaiki mesin diesel tugas berat, pompa hidrolik, dan memelihara sistem kelistrikan tegangan tinggi maupun rendah di seluruh anjungan.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Gordon Abernathy', "Donald O'Connor", 'DJ'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -193,7 +193,7 @@ export default function Structure() {
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Instrument Tech & Motorman (Specialized)</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Merawat sensor, sistem alarm, perangkat elektronik presisi, dan menjaga keandalan mesin utama (engine room).</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Merawat sensor, sistem alarm, perangkat elektronik presisi, dan menjaga keandalan mesin utama (engine room).</p>
                         <div className="flex flex-wrap gap-2">
                             {['Cameron "Caz" McLeary', 'Malcolm Addair', 'Eileen Finlay', 'Davros', 'Banky Holiday', 'Alan McLurg', 'James "Scooby" Scobie', 'Toby Boyd'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -217,7 +217,7 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Barge Engineer & Crane Operator</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Bertanggung jawab mutlak atas stabilitas rig dan pemberat (ballast), serta mengoperasikan derek raksasa untuk bongkar muat dari kapal suplai.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Bertanggung jawab mutlak atas stabilitas rig dan pemberat (ballast), serta mengoperasikan derek raksasa untuk bongkar muat dari kapal suplai.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Alex Cranstoun', 'Bruce'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -226,7 +226,7 @@ export default function Structure() {
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Deck Pusher / Bosun & Roustabout</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Mandor geladak dan pekerja level awal yang fokus membersihkan rig, mengecat, serta memindahkan barang-barang logistik berat.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Mandor geladak dan pekerja level awal yang fokus membersihkan rig, mengecat, serta memindahkan barang-barang logistik berat.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Dalgleish', 'Dobbie', 'Ewan Muir', 'Loudon', 'Sunil', 'Terry Innes', 'Fergus'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -250,7 +250,7 @@ export default function Structure() {
                 <div className="space-y-5 flex-grow">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Camp Boss & Radio Operator</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Mengurus logistik kamar dan mengatur lalu lintas komunikasi penerbangan helikopter serta kapal laut.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Mengurus logistik kamar dan mengatur lalu lintas komunikasi penerbangan helikopter serta kapal laut.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Anderson', 'Andy', 'Bachchan', 'Bannon'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-yellow-50 text-yellow-900 rounded-lg text-xs font-semibold border border-yellow-200">{name}</span>
@@ -259,7 +259,7 @@ export default function Structure() {
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Chief Cook & Steward (Galley Hand)</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Urat nadi kesejahteraan kru: menyiapkan makanan bergizi tinggi, membersihkan kabin, dan mencuci pakaian pekerja.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Urat nadi kesejahteraan kru: menyiapkan makanan bergizi tinggi, membersihkan kabin, dan mencuci pakaian pekerja.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Henderson', 'Logan', 'Jamie McLoud', 'Kelly', 'Ken', 'Shuggie Schaw', 'Keith Shaw'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-sand-100 text-navy-900 rounded-lg text-xs font-semibold border border-sand-200">{name}</span>
@@ -283,7 +283,7 @@ export default function Structure() {
                 <div className="grid md:grid-cols-2 gap-6">
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Penyelam Lepas Pantai (Offshore Divers)</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Bukan staf tetap; kontraktor pihak ketiga yang diturunkan via *Diving Support Vessel* untuk inspeksi atau perbaikan lambung rig bawah air.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Bukan staf tetap; kontraktor pihak ketiga yang diturunkan via *Diving Support Vessel* untuk inspeksi atau perbaikan lambung rig bawah air.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Albert Brodie', 'Rafferty Raffs'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-cyan-50 text-cyan-900 rounded-lg text-xs font-semibold border border-cyan-200">{name}</span>
@@ -292,7 +292,7 @@ export default function Structure() {
                     </div>
                     <div>
                         <h5 className="font-bold text-navy-900 text-sm mb-1">Dukungan Transportasi Udara</h5>
-                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed">Pilot helikopter spesialis laut dalam yang menerjang cuaca ekstrem demi mengantar pergantian kru (crew change) atau Medevac.</p>
+                        <p className="text-xs text-navy-800/80 mb-2 leading-relaxed"><span className="font-bold text-navy-900">Tupoksi:</span> Pilot helikopter spesialis laut dalam yang menerjang cuaca ekstrem demi mengantar pergantian kru (crew change) atau Medevac.</p>
                         <div className="flex flex-wrap gap-2">
                             {['Archie', 'Dominic Clague'].map(name => (
                                 <span key={name} className="px-3 py-1 bg-cyan-50 text-cyan-900 rounded-lg text-xs font-semibold border border-cyan-200">{name}</span>

@@ -152,6 +152,49 @@ export default function K3() {
          </div>
       </section>
 
+      {/* Standar Alat Pelindung Diri (APD) */}
+      <section className="py-16 bg-white border-t border-sand-200">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 animate-on-scroll">
+              <h2 className="text-gold-600 font-bold tracking-[0.2em] uppercase text-sm mb-3">Persyaratan Dasar</h2>
+              <h3 className="text-3xl md:text-4xl font-black text-navy-900 mb-4">Standar Alat Pelindung Diri (APD)</h3>
+              <p className="text-navy-800/80 max-w-3xl mx-auto text-lg">Peralatan wajib yang harus digunakan oleh seluruh kru dan pengunjung saat memasuki zona operasional (Red Zone) di rig lepas pantai.</p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-on-scroll">
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-hard-hat text-4xl text-yellow-500 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Safety Helmet</h4>
+                  <p className="text-xs text-navy-700/80">Melindungi kepala dari benturan & benda jatuh.</p>
+               </div>
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-glasses text-4xl text-blue-500 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Safety Glasses</h4>
+                  <p className="text-xs text-navy-700/80">Melindungi mata dari debu, bahan kimia & serpihan.</p>
+               </div>
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-headphones text-4xl text-red-500 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Ear Defenders</h4>
+                  <p className="text-xs text-navy-700/80">Pelindung pendengaran dari kebisingan mesin rig.</p>
+               </div>
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-mitten text-4xl text-green-600 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Impact Gloves</h4>
+                  <p className="text-xs text-navy-700/80">Sarung tangan khusus anti-benturan benda berat.</p>
+               </div>
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-shoe-prints text-4xl text-stone-700 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Safety Boots</h4>
+                  <p className="text-xs text-navy-700/80">Sepatu pelindung anti-slip dan tahan bahan kimia.</p>
+               </div>
+               <div className="bg-sand-50 border border-sand-200 p-6 rounded-2xl flex flex-col items-center text-center hover:border-gold-500 hover:shadow-lg transition-all group">
+                  <i className="fas fa-vest text-4xl text-orange-500 mb-4 drop-shadow-md group-hover:scale-110 transition-transform"></i>
+                  <h4 className="font-bold text-navy-900 text-sm mb-1">Coverall (FRC)</h4>
+                  <p className="text-xs text-navy-700/80">Pakaian kerja wajib anti-api (Flame Resistant).</p>
+               </div>
+            </div>
+         </div>
+      </section>
       {/* Rencana Tanggap Darurat (ERP) */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
