@@ -187,6 +187,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visi dan Misi Perusahaan */}
+      <section className="py-24 bg-white border-t border-sand-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-gold-600 font-bold tracking-[0.2em] uppercase text-sm mb-2">Panduan Arah Kami</h2>
+            <h3 className="text-4xl md:text-5xl font-black text-navy-900">Visi & Misi</h3>
+            <div className="w-24 h-1 bg-gold-500 mx-auto mt-6 rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Visi */}
+            <div className="bg-navy-900 p-8 md:p-10 rounded-3xl border-t-4 border-gold-500 shadow-xl relative animate-on-scroll group h-full">
+              <div className="absolute -top-8 left-8 md:left-10 w-16 h-16 bg-gold-500 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
+                <i className="fas fa-eye text-navy-950 text-2xl"></i>
+              </div>
+              <h4 className="text-2xl font-black text-sand-50 mb-6 mt-4">Visi Perusahaan</h4>
+              <p className="text-sand-200 text-lg leading-relaxed font-light">
+                Menjadi pelopor eksplorasi dan produksi energi lepas pantai kelas dunia yang paling tangguh, 
+                inovatif, dan bertanggung jawab terhadap kelestarian ekosistem laut, guna memenuhi kebutuhan energi masa depan.
+              </p>
+            </div>
+
+            {/* Misi */}
+            <div className="bg-sand-50 p-8 md:p-10 rounded-3xl border border-sand-200 shadow-xl relative animate-on-scroll group h-full">
+              <div className="absolute -top-8 left-8 md:left-10 w-16 h-16 bg-navy-900 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:-rotate-12 transition-transform duration-300">
+                <i className="fas fa-bullseye text-gold-500 text-2xl"></i>
+              </div>
+              <h4 className="text-2xl font-black text-navy-900 mb-6 mt-4">Misi Perusahaan</h4>
+              <ul className="space-y-4 text-navy-800/80 leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <i className="fas fa-check-circle text-gold-600 mt-1.5 shrink-0"></i>
+                  <span>Menjalankan operasi ekstraksi migas dengan protokol keamanan tanpa toleransi kesalahan (Zero LTI).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <i className="fas fa-check-circle text-gold-600 mt-1.5 shrink-0"></i>
+                  <span>Mengintegrasikan teknologi maritim canggih guna meminimalkan dampak lingkungan dan memastikan keberlanjutan.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <i className="fas fa-check-circle text-gold-600 mt-1.5 shrink-0"></i>
+                  <span>Memberdayakan seluruh kru dengan kompetensi tingkat global, integritas mental, dan kesiapsiagaan darurat maksimum.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
