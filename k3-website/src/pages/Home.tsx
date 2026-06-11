@@ -81,37 +81,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats / Value Proposition Cards */}
-      <section className="relative z-20 -mt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        {/* Uniform Grid Setup */}
+{/* 2. DEDICATED CARD SECTION (Berdiri Sendiri)
+          - Dihapus: -mt-20
+          - Ditambahkan: py-16 (memberikan ruang lega atas dan bawah)
+      */}
+      <section className="relative z-20 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 animate-on-scroll">
-          
-          <div className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-2 h-full">
-            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+
+          {/* Cards: Ditambahkan transform-gpu agar animasi lebih mulus */}
+          <div className="bg-white border border-gray-200 shadow-lg p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 transform-gpu hover:-translate-y-3 hover:shadow-2xl h-full cursor-pointer">
+            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <i className="fas fa-anchor text-gold-500 text-2xl"></i>
             </div>
             <h3 className="text-xl md:text-2xl font-black text-navy-900 mb-1">Deepwater</h3>
             <p className="text-xs text-navy-600 font-bold tracking-widest uppercase">Spesialisasi</p>
           </div>
 
-          <div className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-2 h-full">
-            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+          <div className="bg-white border border-gray-200 shadow-lg p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 transform-gpu hover:-translate-y-3 hover:shadow-2xl h-full cursor-pointer">
+            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <i className="fas fa-shield-alt text-gold-500 text-2xl"></i>
             </div>
             <h3 className="text-xl md:text-2xl font-black text-navy-900 mb-1">Zero LTI</h3>
             <p className="text-xs text-navy-600 font-bold tracking-widest uppercase">Lost Time Injury</p>
           </div>
 
-          <div className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-2 h-full">
-            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+          <div className="bg-white border border-gray-200 shadow-lg p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 transform-gpu hover:-translate-y-3 hover:shadow-2xl h-full cursor-pointer">
+            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <i className="fas fa-fish text-gold-500 text-2xl"></i>
             </div>
             <h3 className="text-xl md:text-2xl font-black text-navy-900 mb-1">Eco-Safe</h3>
             <p className="text-xs text-navy-600 font-bold tracking-widest uppercase">Terverifikasi</p>
           </div>
 
-          <div className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 hover:-translate-y-2 h-full">
-            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+          <div className="bg-white border border-gray-200 shadow-lg p-6 md:p-8 rounded-2xl flex flex-col items-center text-center group transition-all duration-300 transform-gpu hover:-translate-y-3 hover:shadow-2xl h-full cursor-pointer">
+            <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <i className="fas fa-users-cog text-gold-500 text-2xl"></i>
             </div>
             <h3 className="text-xl md:text-2xl font-black text-navy-900 mb-1">100%</h3>

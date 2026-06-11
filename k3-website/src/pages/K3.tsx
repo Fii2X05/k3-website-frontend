@@ -219,6 +219,61 @@ export default function K3() {
         </div>
       </section>
 
+      {/* Video Edukasi & Pelatihan Keselamatan */}
+      <section className="py-20 bg-sand-100 border-t border-gold-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 animate-on-scroll">
+              <h2 className="text-gold-600 font-bold tracking-[0.2em] uppercase text-sm mb-3">Edukasi & Pelatihan</h2>
+              <h3 className="text-3xl md:text-4xl font-black text-navy-900 mb-4">Video Keselamatan Operasional</h3>
+              <p className="text-navy-800/80 max-w-3xl mx-auto text-lg">
+                Pelajari lebih lanjut mengenai praktik keselamatan di lingkungan pengeboran minyak dan gas serta standar regulasi internasional yang diterapkan.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 animate-on-scroll">
+              {/* Video 1: Oil & Gas Drilling rig safety */}
+              <div className="bg-white p-4 rounded-2xl shadow-sm border border-sand-200 hover:shadow-lg transition-shadow duration-300">
+                <div className="relative w-full rounded-xl overflow-hidden pt-[56.25%]">
+                  <iframe 
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/2oXJbdxryCs" 
+                    title="Oil & Gas Drilling rig safety | Animated Safety Videos | TECH EHS"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="mt-5 px-2 pb-2">
+                  <h4 className="font-bold text-navy-900 text-lg mb-2">Oil & Gas Drilling Rig Safety</h4>
+                  <p className="text-sm text-navy-700/80">
+                    Video edukasi animasi dari TECH EHS mengenai mitigasi bahaya titik jepit (pinch point) dan praktik keselamatan dasar saat beroperasi di rig pengeboran minyak dan gas.
+                  </p>
+                </div>
+              </div>
+
+              {/* Video 2: OSHA Oil and Gas Safety Standards */}
+              <div className="bg-white p-4 rounded-2xl shadow-sm border border-sand-200 hover:shadow-lg transition-shadow duration-300">
+                <div className="relative w-full rounded-xl overflow-hidden pt-[56.25%]">
+                  <iframe 
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/h4NuE7wY_pg" 
+                    title="OSHA Oil and Gas Safety Standards"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="mt-5 px-2 pb-2">
+                  <h4 className="font-bold text-navy-900 text-lg mb-2">OSHA Oil & Gas Safety Standards</h4>
+                  <p className="text-sm text-navy-700/80">
+                    Ulasan komprehensif terkait standar keselamatan kerja OSHA (Occupational Safety and Health Administration) untuk perlindungan pekerja di industri ekstraksi migas.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
     </div>
   );
 }
